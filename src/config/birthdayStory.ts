@@ -63,7 +63,7 @@ export const storySegments: StorySegment[] = [
   },
   {
     id: "name-tien",
-    text: "Lê Thị Kim Tiền…",
+    text: "Kim Tiền…",
     audioSrc: "/audio/07-name-tien.mp3",
     enabled: true,
     skippable: true,
