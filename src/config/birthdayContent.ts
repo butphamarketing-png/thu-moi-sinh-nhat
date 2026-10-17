@@ -18,7 +18,7 @@ export type ProgramItem = {
 /**
  * Nội dung thư mời. Sửa ngày, giờ, địa điểm tại `event`.
  * Chuỗi rỗng sẽ hiện placeholder và không được đọc thành tiếng.
- * Giờ 18:00 và 19:00 lấy từ ảnh thư mời đã gửi; xóa nếu chưa chốt.
+ * Ngày 22/10, giờ 19:30 và Gigamall Thủ Đức lấy từ thiệp mới.
  */
 export const birthdayContent = {
   celebrants: [
@@ -41,10 +41,10 @@ export const birthdayContent = {
     "Rất hân hạnh được đón tiếp Quý anh/chị, bạn bè thân thiết tới chung vui cùng chúng mình trong ngày sinh nhật đặc biệt này!",
   thanks: "Rất mong nhận được sự hiện diện của Quý anh/chị và các bạn!",
   event: {
-    date: "",
-    time: "",
-    venue: "",
-    address: "",
+    date: "22/10",
+    time: "19:30",
+    venue: "Gigamall",
+    address: "Thủ Đức",
   },
   placeholders: {
     date: "[Bổ sung ngày tổ chức]",
@@ -58,14 +58,14 @@ export const birthdayContent = {
       id: "welcome",
       title: "Đón khách và giao lưu",
       description: "Chào đón và gặp gỡ những người thân yêu.",
-      time: "18:00",
+      time: "",
       icon: "cheers",
     },
     {
       id: "party",
       title: "Tiệc sinh nhật và chụp hình kỷ niệm",
       description: "Cùng thổi nến, cắt bánh và lưu lại khoảnh khắc.",
-      time: "19:00",
+      time: "",
       icon: "cake",
     },
     {
