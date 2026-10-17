@@ -5,3 +5,4 @@ dist
 .vite
 .vercel
 tsconfig.tsbuildinfo
+.env*
