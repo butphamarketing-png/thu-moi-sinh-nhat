@@ -532,8 +532,33 @@ img {
 }
 
 .portrait-card {
+  position: relative;
   margin: 0;
 }
+
+.frame-jewels {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+  aspect-ratio: 3 / 4;
+  pointer-events: none;
+}
+
+.frame-jewels i {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff 0%, #ffe7a8 42%, #e7c98a 100%);
+  box-shadow: 0 0 8px 2px rgba(255, 226, 170, 0.95);
+  animation: bulb 2.4s ease-in-out infinite;
+}
+
+.frame-jewels i:nth-child(1) { top: 7%; left: 4%; }
+.frame-jewels i:nth-child(2) { top: 7%; right: 4%; animation-delay: -0.8s; }
+.frame-jewels i:nth-child(3) { bottom: 8%; left: 7%; animation-delay: -1.5s; }
+.frame-jewels i:nth-child(4) { bottom: 8%; right: 7%; animation-delay: -0.4s; }
 
 .portrait-frame {
   position: relative;
@@ -578,8 +603,10 @@ img {
 .stage-named-left .portrait-card:first-child .portrait-frame,
 .stage-complete .portrait-frame {
   box-shadow:
-    0 0 0 4px rgba(255, 255, 255, 0.85),
-    0 0 28px rgba(243, 214, 160, 0.7),
+    0 0 0 3px #fff,
+    0 0 0 6px rgba(231, 201, 138, 0.95),
+    0 0 0 11px rgba(255, 255, 255, 0.72),
+    0 0 26px rgba(243, 214, 160, 0.85),
     0 16px 40px rgba(176, 77, 110, 0.2);
 }
 
@@ -819,6 +846,39 @@ img {
   text-transform: uppercase;
 }
 
+.ribbon-label {
+  display: inline-block;
+  position: relative;
+  padding: 0.38rem 1.35rem;
+  color: #fff;
+  letter-spacing: 0.28em;
+  background: linear-gradient(180deg, #f7a3bf 0%, #e25584 100%);
+  border-radius: 3px;
+  box-shadow:
+    0 0 16px rgba(255, 186, 210, 0.85),
+    0 8px 16px rgba(207, 40, 91, 0.18);
+}
+
+.ribbon-label::before,
+.ribbon-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: #d24b78;
+}
+
+.ribbon-label::before {
+  left: -10px;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.ribbon-label::after {
+  right: -10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
 .script-title {
   position: relative;
   margin: 0.15rem 0 0;
@@ -871,11 +931,18 @@ img {
 .invitation {
   width: min(38rem, 100%);
   margin: 1.15rem auto 0;
+  padding: 0.95rem 1.15rem;
   color: #6d4a55;
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.12rem;
   line-height: 1.75;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 248, 230, 0.95), transparent 55%),
+    rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(231, 201, 138, 0.65);
+  border-radius: 20px;
+  box-shadow: 0 0 18px rgba(255, 236, 214, 0.9);
 }
 
 .section {

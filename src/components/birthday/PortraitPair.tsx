@@ -15,7 +15,7 @@ export function PortraitPair({ portraits, stage, variant }: PortraitPairProps) {
   return (
     <div className={`portrait-pair portrait-pair-${variant} stage-${stage}`}>
       {portraits.map((portrait, index) => (
-        <PortraitCard key={portrait.id} portrait={portrait} stage={stage} index={index} />
+        <PortraitCard key={portrait.id} portrait={portrait} stage={stage} index={index} jewels={variant === "hero"} />
       ))}
       <span className="pair-heart" aria-hidden="true">
         <HeartIcon />
@@ -29,10 +29,12 @@ function PortraitCard({
   portrait,
   stage,
   index,
+  jewels,
 }: {
   portrait: Celebrant;
   stage: PortraitStage;
   index: number;
+  jewels: boolean;
 }) {
   const [missing, setMissing] = useState(false);
   const nameVisible =
@@ -56,6 +58,14 @@ function PortraitCard({
           />
         )}
       </div>
+      {jewels && (
+        <span className="frame-jewels" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+          <i />
+        </span>
+      )}
       <figcaption aria-hidden={nameVisible ? undefined : true} className={nameVisible ? "portrait-name is-on" : "portrait-name"}>
         {portrait.name}
         <span className="portrait-born">{portrait.born}</span>

@@ -16,7 +16,7 @@ export function BirthdayHero({ stage }: { stage: PortraitStage }) {
         <i />
         <i />
       </div>
-      <p className="eyebrow">Thư mời</p>
+      <p className="eyebrow ribbon-label">Thư mời</p>
       <FloralDivider />
       <h1 className="script-title">Sinh Nhật</h1>
       <FloralDivider />
