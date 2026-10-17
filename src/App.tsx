@@ -126,6 +126,38 @@ export function App() {
       )}
       {pageOn && (
         <main className="page">
+          <svg className="garland" viewBox="0 0 760 40" aria-hidden="true">
+            <defs>
+              <radialGradient id="bulb-gold" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stopColor="#fff" />
+                <stop offset="46%" stopColor="#ffe7a8" />
+                <stop offset="100%" stopColor="#e7c98a" />
+              </radialGradient>
+              <radialGradient id="bulb-pink" cx="35%" cy="30%" r="70%">
+                <stop offset="0%" stopColor="#fff" />
+                <stop offset="50%" stopColor="#ffd0e0" />
+                <stop offset="100%" stopColor="#ee7ea3" />
+              </radialGradient>
+            </defs>
+            <polyline points="8,14 78,28 148,16 218,10 288,16 358,28 428,16 498,10 568,16 638,28 708,16" />
+            <circle cx="8" cy="14" r="5" fill="url(#bulb-gold)" />
+            <circle cx="78" cy="28" r="5.5" fill="url(#bulb-pink)" />
+            <circle cx="148" cy="16" r="5" fill="url(#bulb-gold)" />
+            <circle cx="218" cy="10" r="4.5" fill="url(#bulb-pink)" />
+            <circle cx="288" cy="16" r="5" fill="url(#bulb-gold)" />
+            <circle cx="358" cy="28" r="5.5" fill="url(#bulb-pink)" />
+            <circle cx="428" cy="16" r="5" fill="url(#bulb-gold)" />
+            <circle cx="498" cy="10" r="4.5" fill="url(#bulb-pink)" />
+            <circle cx="568" cy="16" r="5" fill="url(#bulb-gold)" />
+            <circle cx="638" cy="28" r="5.5" fill="url(#bulb-pink)" />
+            <circle cx="708" cy="16" r="5" fill="url(#bulb-gold)" />
+          </svg>
+          <div className="page-gems" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <i />
+          </div>
           <BirthdayHero stage="complete" />
           {showEvent && (
             <section className="section event-section" id="event" aria-labelledby="event-title">
