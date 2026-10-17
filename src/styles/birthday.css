@@ -594,8 +594,26 @@ img {
   position: relative;
   z-index: 2;
   width: min(var(--page), calc(100% - 2rem));
-  margin: 0 auto;
-  padding-bottom: 4rem;
+  margin: 5rem auto 2.5rem;
+  padding: 1.7rem 1.35rem 2.6rem;
+  background:
+    radial-gradient(circle at 0 0, rgba(255, 226, 206, 0.75), transparent 32%),
+    radial-gradient(circle at 100% 0, rgba(255, 210, 224, 0.7), transparent 30%),
+    linear-gradient(180deg, rgba(255, 252, 249, 0.94), rgba(255, 244, 247, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 36px;
+  box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.28),
+    0 22px 50px rgba(176, 77, 110, 0.12);
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(194, 90, 122, 0.22);
+  border-radius: 26px;
+  pointer-events: none;
 }
 
 .hero,
@@ -604,7 +622,7 @@ img {
 }
 
 .hero {
-  padding: 6.2rem 0 1rem;
+  padding: 0.55rem 0 0.2rem;
   text-align: center;
 }
 
@@ -653,9 +671,13 @@ img {
 }
 
 .invitation {
-  width: min(40rem, 100%);
-  margin: 1.3rem auto 0;
-  color: var(--text-secondary);
+  width: min(38rem, 100%);
+  margin: 1.15rem auto 0;
+  color: #6d4a55;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.75;
 }
 
 .section {
@@ -689,12 +711,10 @@ img {
 .info-card,
 .rsvp-form,
 .site-footer {
-  background:
-    radial-gradient(circle at 100% 0%, rgba(255, 214, 226, 0.7), transparent 36%),
-    rgba(255, 251, 249, 0.9);
-  border: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, #fff 0%, #fff7f4 100%);
+  border: 1px solid rgba(237, 75, 122, 0.16);
   border-radius: 28px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 12px 28px rgba(176, 77, 110, 0.08);
 }
 
 .info-card {
@@ -988,6 +1008,17 @@ img {
 }
 
 @media (max-width: 800px) {
+  .page {
+    margin-top: 4.6rem;
+    padding: 1.2rem 0.85rem 2rem;
+    border-radius: 26px;
+  }
+
+  .page::before {
+    inset: 8px;
+    border-radius: 18px;
+  }
+
   .event-grid,
   .timeline {
     grid-template-columns: 1fr;
