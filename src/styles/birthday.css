@@ -1631,39 +1631,22 @@ img {
   cursor: default;
 }
 
-.fortune-legend {
+.fortune-popup {
+  position: fixed;
+  z-index: 40;
+  inset: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.4rem 1rem;
-  width: min(640px, 100%);
-  margin: 1.15rem auto 0;
-  padding: 0;
-  list-style: none;
-  text-align: left;
-}
-
-.fortune-legend li {
-  display: flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  padding: 0.42rem 0.7rem;
-  border: 1px solid rgba(231, 201, 138, 0.55);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-}
-
-.fortune-legend li.is-won {
-  border-color: #e7c98a;
-  background: linear-gradient(180deg, #fff 0%, #ffe9c2 100%);
-  box-shadow: 0 0 16px rgba(243, 214, 160, 0.75);
+  place-items: center;
+  padding: 1.2rem;
+  background: rgba(92, 49, 64, 0.38);
 }
 
 .fortune-result {
   position: relative;
   overflow: hidden;
-  width: min(520px, 100%);
-  margin: 1.1rem auto 0;
-  padding: 1.15rem 1rem 1rem;
+  width: min(440px, 100%);
+  margin: 0;
+  padding: 1.35rem 1.15rem 1.15rem;
   border: 1px solid rgba(231, 201, 138, 0.95);
   border-radius: 28px;
   background:
@@ -1699,6 +1682,11 @@ img {
   vertical-align: -0.2em;
 }
 
+.fortune-emoji .prize-mark {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
 .fortune-actions {
   display: flex;
   justify-content: center;
@@ -1714,6 +1702,3 @@ img {
   pointer-events: none;
 }
 
-@media (max-width: 700px) {
-  .fortune-legend { grid-template-columns: 1fr; }
-}

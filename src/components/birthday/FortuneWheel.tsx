@@ -118,6 +118,12 @@ export function FortuneWheel() {
 
   useEffect(() => stopVoice, []);
 
+  function closeResult() {
+    stopVoice();
+    setShowResult(false);
+    spinButton.current?.focus();
+  }
+
   function finish(index: number) {
     pending.current = null;
     setSpinning(false);
@@ -126,6 +132,20 @@ export function FortuneWheel() {
     speakPrize(index);
     window.setTimeout(() => againButton.current?.focus(), 0);
   }
+
+  useEffect(() => {
+    if (!showResult) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeResult();
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [showResult]);
 
   function spin() {
     if (spinning) return;
@@ -226,43 +246,34 @@ export function FortuneWheel() {
         </button>
       )}
 
-      <ol className="fortune-legend">
-        {prizes.map((item, index) => (
-          <li key={item.title} className={showResult && result === index ? "is-won" : undefined}>
-            <span aria-hidden="true"><PrizeMark emoji={item.emoji} /></span>
-            <strong>{item.title}</strong>
-          </li>
-        ))}
-      </ol>
-
       {showResult && prize && (
-        <div className="fortune-result" role="status" aria-live="polite">
-          {!reduced && (
-            <div className="fortune-burst" aria-hidden="true">
-              {Array.from({ length: 8 }, (_, index) => (
-                <i key={index} className={`confetti-bit bit-${index}`} />
-              ))}
+        <div className="fortune-popup" onClick={closeResult}>
+          <div
+            className="fortune-result"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="fortune-result-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {!reduced && (
+              <div className="fortune-burst" aria-hidden="true">
+                {Array.from({ length: 8 }, (_, index) => (
+                  <i key={index} className={`confetti-bit bit-${index}`} />
+                ))}
+              </div>
+            )}
+            <p className="fortune-banner">Nhân phẩm đã lên tiếng! 🎉</p>
+            <p className="fortune-emoji"><PrizeMark emoji={prize.emoji} /></p>
+            <h3 id="fortune-result-title">{prize.title}</h3>
+            <p>{prize.detail}</p>
+            <div className="fortune-actions">
+              <button ref={againButton} type="button" className="rsvp-btn" onClick={spin}>
+                QUAY TIẾP
+              </button>
+              <button type="button" className="text-btn" onClick={closeResult}>
+                ĐÓNG
+              </button>
             </div>
-          )}
-          <p className="fortune-banner">Nhân phẩm đã lên tiếng! 🎉</p>
-          <p className="fortune-emoji"><PrizeMark emoji={prize.emoji} /></p>
-          <h3>{prize.title}</h3>
-          <p>{prize.detail}</p>
-          <div className="fortune-actions">
-            <button ref={againButton} type="button" className="rsvp-btn" onClick={spin}>
-              QUAY TIẾP
-            </button>
-            <button
-              type="button"
-              className="text-btn"
-              onClick={() => {
-                stopVoice();
-                setShowResult(false);
-                spinButton.current?.focus();
-              }}
-            >
-              ĐÓNG
-            </button>
           </div>
         </div>
       )}
