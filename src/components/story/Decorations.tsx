@@ -75,10 +75,8 @@ export function Decorations({ reduced }: { reduced: boolean }) {
       <Spray className="spray spray-left" />
       <Spray className="spray spray-right" />
       <Balloon className="balloon balloon-a" color="#f7a8c4" />
-      <Balloon className="balloon balloon-b" color="#fff" />
       <Balloon className="balloon balloon-c" color="#f3d6a0" />
       <Balloon className="balloon balloon-d" color="#ee7ea3" />
-      <Balloon className="balloon balloon-e" color="#fff6fb" />
       <svg className="ribbon" viewBox="0 0 220 70" aria-hidden="true">
         <path d="M10 36c40-24 70 18 110-2s60-20 90 4" fill="none" stroke="#e35d86" strokeWidth="8" strokeLinecap="round" />
         <path d="M10 36c40-24 70 18 110-2s60-20 90 4" fill="none" stroke="#ffd0e0" strokeWidth="2" strokeLinecap="round" />

@@ -12,7 +12,7 @@ function midiToFreq(midi: number) {
 export class MusicBed {
   private ctx: AudioContext | null = null;
   private master: GainNode | null = null;
-  private raf = 0;
+  private timer = 0;
   private nextTime = 0;
   private step = 0;
   private started = false;
@@ -50,6 +50,7 @@ export class MusicBed {
     this.suspended = false;
     this.nextTime = ctx.currentTime + 0.12;
     this.loop();
+    this.timer = window.setInterval(this.loop, 700);
   }
 
   private delay: DelayNode | null = null;
@@ -79,22 +80,18 @@ export class MusicBed {
   private loop = () => {
     if (!this.ctx || !this.started) return;
     if (!this.suspended && this.ctx.state === "running") {
-      const horizon = this.ctx.currentTime + 0.25;
+      const horizon = this.ctx.currentTime + 1.5;
       while (this.nextTime < horizon) {
         this.playBeat(this.nextTime);
         this.nextTime += this.beat;
         this.step += 1;
       }
     }
-    this.raf = requestAnimationFrame(this.loop);
   };
 
   private playBeat(time: number) {
     const note = MELODY[this.step % MELODY.length];
-    if (note) {
-      this.tone(midiToFreq(note), time, this.beat * 1.35, "triangle", 0.22);
-      this.tone(midiToFreq(note + 12), time, this.beat * 0.7, "sine", 0.05);
-    }
+    if (note) this.tone(midiToFreq(note), time, this.beat * 1.35, "triangle", 0.22);
     if (this.step % 3 === 0) {
       const bass = BASS[Math.floor(this.step / 3) % BASS.length];
       this.tone(midiToFreq(bass), time, this.beat * 2.6, "sine", 0.16);
@@ -105,16 +102,12 @@ export class MusicBed {
     if (!this.ctx || !this.master) return;
     const osc = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
-    const filter = this.ctx.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.setValueAtTime(2400, time);
     osc.type = type;
     osc.frequency.setValueAtTime(freq, time);
     gain.gain.setValueAtTime(0.0001, time);
     gain.gain.exponentialRampToValueAtTime(amount, time + 0.03);
     gain.gain.exponentialRampToValueAtTime(0.0001, time + duration);
-    osc.connect(filter);
-    filter.connect(gain);
+    osc.connect(gain);
     gain.connect(this.master);
     if (this.delay && type === "triangle") gain.connect(this.delay);
     osc.start(time);
@@ -122,7 +115,7 @@ export class MusicBed {
   }
 
   dispose() {
-    cancelAnimationFrame(this.raf);
+    window.clearInterval(this.timer);
     void this.ctx?.close();
     this.ctx = null;
     this.started = false;

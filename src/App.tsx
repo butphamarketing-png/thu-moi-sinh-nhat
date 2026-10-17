@@ -90,7 +90,9 @@ export function App() {
   return (
     <div className="experience" data-phase={story.phase} data-scene={story.scene} data-reduced={reduced ? "true" : "false"}>
       <Atmosphere reduced={reduced} finale={story.isRevealed("finale")} />
-      <SparkleField scene={story.scene} paused={story.phase === "paused"} reduced={reduced} burst={story.isRevealed("finale")} />
+      {!pageOn && story.phase !== "skipped" && story.phase !== "completed" && (
+        <SparkleField scene={story.scene} paused={story.phase === "paused"} reduced={reduced} burst={story.isRevealed("finale")} />
+      )}
       {showIntro && (
         <IntroScreen
           leaving={story.phase === "playing" || story.phase === "paused"}
