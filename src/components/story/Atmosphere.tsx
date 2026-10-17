@@ -1,6 +1,7 @@
 import { Decorations } from "./Decorations";
 
 const petals = [0, 1, 2, 3, 4];
+const sparks = [0, 1, 2, 3, 4, 5, 6, 7];
 
 export function Atmosphere({ reduced, finale }: { reduced: boolean; finale: boolean }) {
   return (
@@ -14,6 +15,8 @@ export function Atmosphere({ reduced, finale }: { reduced: boolean; finale: bool
       <div className="orb orb-left" />
       <div className="orb orb-right" />
       <div className="veil" />
+      {!reduced &&
+        sparks.map((spark) => <span key={spark} className={`spark spark-${spark}`} />)}
       {!reduced &&
         petals.map((petal) => (
           <span key={petal} className={`petal petal-${petal}`} />
