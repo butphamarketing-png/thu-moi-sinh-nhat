@@ -58,6 +58,7 @@ function PortraitCard({
       </div>
       <figcaption aria-hidden={nameVisible ? undefined : true} className={nameVisible ? "portrait-name is-on" : "portrait-name"}>
         {portrait.name}
+        <span className="portrait-born">{portrait.born}</span>
       </figcaption>
     </figure>
   );

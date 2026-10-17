@@ -1,6 +1,7 @@
 export type Celebrant = {
   id: "kim-tien" | "phuong-uyen";
   name: string;
+  born: string;
   image: string;
   alt: string;
   objectPosition: string;
@@ -25,15 +26,17 @@ export const birthdayContent = {
     {
       id: "kim-tien",
       name: "Lê Thị Kim Tiền",
+      born: "26.10.2003",
       image: "/images/kim-tien.jpg",
       alt: "Ảnh chân dung Lê Thị Kim Tiền",
       objectPosition: "center 22%",
     },
     {
       id: "phuong-uyen",
-      name: "Phương Uyên",
+      name: "Lê Thị Phương Uyên",
+      born: "29.10.2004",
       image: "/images/phuong-uyen.jpg",
-      alt: "Ảnh chân dung Phương Uyên",
+      alt: "Ảnh chân dung Lê Thị Phương Uyên",
       objectPosition: "center 32%",
     },
   ] satisfies Celebrant[],
