@@ -286,22 +286,33 @@ img {
 .spark-8 { top: 54%; left: 40%; animation-delay: -1.1s; }
 .spark-9 { top: 80%; left: 58%; animation-delay: -2.6s; }
 
-.petal {
+.blossom {
   position: absolute;
-  top: -8%;
-  width: 12px;
-  height: 18px;
-  border-radius: 80% 10% 80% 10%;
-  background: #f3b3c6;
-  opacity: 0.8;
-  animation: petal 24s linear infinite;
+  top: -14%;
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  animation: fall linear infinite;
 }
 
-.petal-0 { left: 8%; animation-duration: 22s; }
-.petal-1 { left: 28%; animation-duration: 27s; animation-delay: -8s; background: #f3d6a0; }
-.petal-2 { left: 52%; animation-duration: 24s; animation-delay: -14s; }
-.petal-3 { left: 70%; animation-duration: 29s; animation-delay: -4s; background: #e9789d; }
-.petal-4 { left: 88%; animation-duration: 23s; animation-delay: -11s; }
+.blossom svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blossom-0 { left: 6%; width: 22px; height: 22px; animation-duration: 13s; }
+.blossom-1 { left: 16%; animation-duration: 16s; animation-delay: -6s; }
+.blossom-2 { left: 27%; width: 18px; height: 18px; animation-duration: 12s; animation-delay: -3s; }
+.blossom-3 { left: 38%; animation-duration: 18s; animation-delay: -11s; }
+.blossom-4 { left: 48%; width: 30px; height: 30px; animation-duration: 15s; animation-delay: -8s; }
+.blossom-5 { left: 58%; width: 20px; height: 20px; animation-duration: 14s; animation-delay: -2s; }
+.blossom-6 { left: 68%; animation-duration: 17s; animation-delay: -13s; }
+.blossom-7 { left: 78%; width: 18px; height: 18px; animation-duration: 12.5s; animation-delay: -5s; }
+.blossom-8 { left: 86%; animation-duration: 15.5s; animation-delay: -9s; }
+.blossom-9 { left: 93%; width: 16px; height: 16px; animation-duration: 13.5s; animation-delay: -1s; }
+.blossom-10 { left: 22%; width: 14px; height: 14px; animation-duration: 19s; animation-delay: -15s; }
+.blossom-11 { left: 72%; width: 24px; height: 24px; animation-duration: 11.5s; animation-delay: -7s; }
 
 .confetti {
   position: absolute;
@@ -1080,6 +1091,12 @@ img {
     border-radius: 26px;
   }
 
+  .blossom { width: 16px; height: 16px; }
+  .blossom-8,
+  .blossom-9,
+  .blossom-10,
+  .blossom-11 { display: none; }
+
   .page::before {
     inset: 8px;
     border-radius: 18px;
@@ -1127,6 +1144,7 @@ img {
   }
 
   .petal,
+  .blossom,
   .confetti,
   .spark,
   .sparkle-field { display: none; }
@@ -1181,6 +1199,13 @@ img {
 @keyframes drift {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(18px, -22px, 0); }
+}
+
+@keyframes fall {
+  0% { transform: translate3d(0, -12vh, 0) rotate(0deg); }
+  35% { transform: translate3d(28px, 38vh, 0) rotate(70deg); }
+  70% { transform: translate3d(-22px, 72vh, 0) rotate(140deg); }
+  100% { transform: translate3d(16px, 112vh, 0) rotate(200deg); }
 }
 
 @keyframes petal {

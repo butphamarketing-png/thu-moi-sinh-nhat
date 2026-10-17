@@ -1,6 +1,23 @@
 import { Decorations } from "./Decorations";
 
-const petals = [0, 1, 2, 3, 4];
+const blossoms = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const blossomFill = ["#f7b7c8", "#f3d6a0", "#ee7ea3"];
+
+function Blossom({ index }: { index: number }) {
+  return (
+    <span className={`blossom blossom-${index}`}>
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <g fill={blossomFill[index % blossomFill.length]}>
+          <circle cx="16" cy="7" r="6" />
+          <circle cx="25" cy="16" r="6" />
+          <circle cx="16" cy="25" r="6" />
+          <circle cx="7" cy="16" r="6" />
+        </g>
+        <circle cx="16" cy="16" r="3.2" fill="#fff8ee" />
+      </svg>
+    </span>
+  );
+}
 const sparks = [
   ["star", 0],
   ["gem", 1],
@@ -30,10 +47,7 @@ export function Atmosphere({ reduced, finale }: { reduced: boolean; finale: bool
         sparks.map(([kind, index]) => (
           <span key={index} className={`spark spark-${kind} spark-${index}`} />
         ))}
-      {!reduced &&
-        petals.map((petal) => (
-          <span key={petal} className={`petal petal-${petal}`} />
-        ))}
+      {!reduced && blossoms.map((index) => <Blossom key={index} index={index} />)}
       {finale && !reduced && (
         <div className="confetti">
           {Array.from({ length: 12 }, (_, index) => (
