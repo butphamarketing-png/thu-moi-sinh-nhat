@@ -1693,6 +1693,12 @@ img {
   line-height: 1;
 }
 
+.prize-mark {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+}
+
 .fortune-actions {
   display: flex;
   justify-content: center;

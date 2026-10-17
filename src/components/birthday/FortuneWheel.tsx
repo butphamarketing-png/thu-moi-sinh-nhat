@@ -5,17 +5,22 @@ import { useReducedMotion } from "../../hooks/useReducedMotion";
 const SEGMENT = 36;
 
 const prizes = [
-  { emoji: "💗", short: "Tâm sự", title: "Tâm sự đặc quyền", detail: "Được ưu tiên tâm sự với hai nhân vật chính.", audio: "/audio/wheel-01.mp3", spoken: "Bạn quay trúng Tâm sự đặc quyền. Bạn được ưu tiên tâm sự với hai nhân vật chính." },
-  { emoji: "🍗", short: "Món đầu", title: "Ăn món đầu tiên", detail: "Được quyền chọn món đầu tiên.", audio: "/audio/wheel-02.mp3", spoken: "Bạn quay trúng Ăn món đầu tiên. Bạn được quyền chọn món đầu tiên." },
+  { emoji: "💋", short: "Nịnh", title: "Chủ tiệc nịnh khách", detail: "Chủ tiệc phải chọn một vị khách và dành 3 lời khen thật lòng cho người đó. Cấm khen qua loa!", audio: "/audio/wheel-01.mp3", spoken: "Bạn quay trúng Chủ tiệc nịnh khách. Chủ tiệc phải chọn một vị khách và dành ba lời khen thật lòng cho người đó. Cấm khen qua loa!" },
+  { emoji: "🍜", short: "Biểu cảm", title: "Thử thách biểu cảm", detail: "Chủ tiệc phải diễn tả cảm xúc khi nhận được món quà mình không thích trong 15 giây. Cả bàn làm ban giám khảo!", audio: "/audio/wheel-02.mp3", spoken: "Bạn quay trúng Thử thách biểu cảm. Chủ tiệc phải diễn tả cảm xúc khi nhận được món quà mình không thích trong mười lăm giây. Cả bàn làm ban giám khảo!" },
   { emoji: "🎤", short: "Hát", title: "Bị phạt hát", detail: "Hát một đoạn nhạc bất kỳ tặng chủ tiệc.", audio: "/audio/wheel-03.mp3", spoken: "Bạn quay trúng Bị phạt hát. Hãy hát một đoạn nhạc bất kỳ tặng chủ tiệc." },
   { emoji: "💃", short: "Nhảy", title: "Bị phạt nhảy", detail: "Nhảy 10 giây, không được ngại.", audio: "/audio/wheel-04.mp3", spoken: "Bạn quay trúng Bị phạt nhảy. Hãy nhảy mười giây, không được ngại." },
   { emoji: "🤣", short: "Quê", title: "Kể chuyện quê", detail: "Khai một chuyện quê độ của bản thân.", audio: "/audio/wheel-05.mp3", spoken: "Bạn quay trúng Kể chuyện quê. Hãy khai một chuyện quê độ của bản thân." },
   { emoji: "📸", short: "Ảnh", title: "Chụp ảnh thử thách", detail: "Chụp ảnh tạo dáng bá đạo cùng hai chủ tiệc.", audio: "/audio/wheel-06.mp3", spoken: "Bạn quay trúng Chụp ảnh thử thách. Hãy chụp ảnh tạo dáng bá đạo cùng hai chủ tiệc." },
-  { emoji: "🥤", short: "Rót nước", title: "Phục vụ danh dự", detail: "Rót nước cho người ngồi cạnh.", audio: "/audio/wheel-07.mp3", spoken: "Bạn quay trúng Phục vụ danh dự. Hãy rót nước cho người ngồi cạnh." },
+  { emoji: "🫶", short: "Yêu cầu", title: "Chủ tiệc làm theo yêu cầu", detail: "Vị khách quay trúng được đưa ra một thử thách vui, phù hợp và an toàn để chủ tiệc thực hiện ngay tại chỗ.", audio: "/audio/wheel-07.mp3", spoken: "Bạn quay trúng Chủ tiệc làm theo yêu cầu. Vị khách quay trúng được đưa ra một thử thách vui, phù hợp và an toàn để chủ tiệc thực hiện ngay tại chỗ." },
   { emoji: "👑", short: "VIP", title: "Khách VIP", detail: "Được miễn một hình phạt bất kỳ.", audio: "/audio/wheel-08.mp3", spoken: "Bạn quay trúng Khách VIP. Bạn được miễn một hình phạt bất kỳ." },
   { emoji: "💸", short: "Lời chúc", title: "Nộp thuế sinh nhật", detail: "Nói một lời chúc thật có tâm dành cho hai chủ tiệc.", audio: "/audio/wheel-09.mp3", spoken: "Bạn quay trúng Nộp thuế sinh nhật. Hãy nói một lời chúc thật có tâm dành cho hai chủ tiệc." },
-  { emoji: "🍀", short: "Thoát", title: "Thoát nạn", detail: "Miễn phạt một lượt, nhân phẩm vô cực!", audio: "/audio/wheel-10.mp3", spoken: "Bạn quay trúng Thoát nạn. Bạn được miễn phạt một lượt. Nhân phẩm vô cực!" },
+  { emoji: "🕺", short: "Quẩy", title: "Chủ tiệc quẩy tới bến", detail: "Cả Kim Tiền và Phương Uyên phải cùng nhảy theo một điệu nhạc bất kỳ trong 15 giây. Không được đứng im!", audio: "/audio/wheel-10.mp3", spoken: "Bạn quay trúng Chủ tiệc quẩy tới bến. Cả Kim Tiền và Phương Uyên phải cùng nhảy theo một điệu nhạc bất kỳ trong mười lăm giây. Không được đứng im!" },
 ] as const;
+
+function PrizeMark({ emoji }: { emoji: string }) {
+  if (emoji === "🫶") return <img className="prize-mark" src="/images/heart-hands.svg" alt="" />;
+  return emoji;
+}
 
 const sliceColors = [
   "#ffd0e0",
@@ -177,6 +182,16 @@ export function FortuneWheel() {
               return (
                 <g key={item.title}>
                   <path d={wedgePath(index)} fill={sliceColors[index]} stroke="#fffaf8" strokeWidth="0.45" />
+                  {item.emoji === "🫶" && (
+                    <image
+                      href="/images/heart-hands.svg"
+                      x={x - 3.1}
+                      y={y - 7.6}
+                      width="6.2"
+                      height="6.2"
+                      transform={`rotate(${center + 90} ${x} ${y})`}
+                    />
+                  )}
                   <text
                     x={x}
                     y={y}
@@ -189,7 +204,7 @@ export function FortuneWheel() {
                     transform={`rotate(${center + 90} ${x} ${y})`}
                   >
                     <tspan x={x} dy="-0.55em" fontSize="4.4">
-                      {item.emoji}
+                      {item.emoji === "🫶" ? "" : item.emoji}
                     </tspan>
                     <tspan x={x} dy="1.25em">
                       {item.short}
@@ -214,7 +229,7 @@ export function FortuneWheel() {
       <ol className="fortune-legend">
         {prizes.map((item, index) => (
           <li key={item.title} className={showResult && result === index ? "is-won" : undefined}>
-            <span aria-hidden="true">{item.emoji}</span>
+            <span aria-hidden="true"><PrizeMark emoji={item.emoji} /></span>
             <strong>{item.title}</strong>
           </li>
         ))}
@@ -230,7 +245,7 @@ export function FortuneWheel() {
             </div>
           )}
           <p className="fortune-banner">Nhân phẩm đã lên tiếng! 🎉</p>
-          <p className="fortune-emoji">{prize.emoji}</p>
+          <p className="fortune-emoji"><PrizeMark emoji={prize.emoji} /></p>
           <h3>{prize.title}</h3>
           <p>{prize.detail}</p>
           <div className="fortune-actions">
