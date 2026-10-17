@@ -157,6 +157,7 @@ export function FortuneWheel() {
       <p className="fortune-hint">Nhấn nút bên dưới và để nhân phẩm quyết định!</p>
 
       <div className="wheel-stage">
+        <span className="wheel-glow" aria-hidden="true" />
         <span className="wheel-pointer" aria-hidden="true" />
         <div
           className={reduced ? "wheel-rotor is-still" : "wheel-rotor"}
@@ -168,7 +169,8 @@ export function FortuneWheel() {
           }}
         >
           <svg className="wheel-svg" viewBox="0 0 100 100" role="img" aria-label="Vòng quay mười thử thách">
-            <circle cx="50" cy="50" r="47.2" fill="#fffaf6" stroke="#e7c98a" strokeWidth="1.6" />
+            <circle cx="50" cy="50" r="47.2" fill="#fffaf6" stroke="#e7c98a" strokeWidth="1.7" />
+            <circle cx="50" cy="50" r="44.2" fill="none" stroke="rgba(255,255,255,0.8)" strokeWidth="0.35" />
             {prizes.map((item, index) => {
               const center = -90 + index * SEGMENT;
               const [x, y] = polar(50, 50, 30, center);
@@ -210,8 +212,8 @@ export function FortuneWheel() {
       )}
 
       <ol className="fortune-legend">
-        {prizes.map((item) => (
-          <li key={item.title}>
+        {prizes.map((item, index) => (
+          <li key={item.title} className={showResult && result === index ? "is-won" : undefined}>
             <span aria-hidden="true">{item.emoji}</span>
             <strong>{item.title}</strong>
           </li>

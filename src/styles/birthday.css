@@ -1327,6 +1327,12 @@ img {
   text-align: center;
 }
 
+.fortune-section h2 {
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.95),
+    0 0 24px rgba(255, 176, 204, 0.75);
+}
+
 .fortune-lead,
 .fortune-hint {
   width: min(40rem, 100%);
@@ -1343,6 +1349,15 @@ img {
   width: min(440px, 100%);
   margin: 1.1rem auto 0.9rem;
   aspect-ratio: 1;
+}
+
+.wheel-glow {
+  position: absolute;
+  inset: 7%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 244, 214, 0.7), rgba(255, 186, 208, 0.18) 58%, transparent 72%);
+  box-shadow: 0 0 36px rgba(243, 214, 160, 0.55);
+  pointer-events: none;
 }
 
 .wheel-rotor,
@@ -1365,14 +1380,14 @@ img {
   position: absolute;
   z-index: 3;
   left: 50%;
-  top: 1.5%;
-  width: 0;
-  height: 0;
-  transform: translateX(-50%);
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 22px solid #cf285b;
-  filter: drop-shadow(0 3px 0 rgba(255, 250, 248, 0.9));
+  top: 0;
+  width: 18px;
+  height: 18px;
+  transform: translateX(-50%) rotate(45deg);
+  border: 2px solid #cf285b;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #fff 0%, #f3d6a0 70%);
+  box-shadow: 0 0 12px rgba(243, 214, 160, 0.95);
 }
 
 .wheel-hub {
@@ -1389,7 +1404,10 @@ img {
   border-radius: 50%;
   color: #cf285b;
   background: radial-gradient(circle, #fff 0%, #ffe0ea 72%);
-  box-shadow: 0 8px 18px rgba(176, 77, 110, 0.16);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.45),
+    0 0 18px rgba(243, 214, 160, 0.8),
+    0 8px 18px rgba(176, 77, 110, 0.16);
   font-size: clamp(1.1rem, 3vw, 1.6rem);
 }
 
@@ -1417,6 +1435,16 @@ img {
   display: flex;
   gap: 0.4rem;
   align-items: baseline;
+  padding: 0.42rem 0.7rem;
+  border: 1px solid rgba(231, 201, 138, 0.55);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.fortune-legend li.is-won {
+  border-color: #e7c98a;
+  background: linear-gradient(180deg, #fff 0%, #ffe9c2 100%);
+  box-shadow: 0 0 16px rgba(243, 214, 160, 0.75);
 }
 
 .fortune-result {
@@ -1425,10 +1453,14 @@ img {
   width: min(520px, 100%);
   margin: 1.1rem auto 0;
   padding: 1.15rem 1rem 1rem;
-  border: 1px solid rgba(231, 201, 138, 0.8);
+  border: 1px solid rgba(231, 201, 138, 0.95);
   border-radius: 28px;
-  background: linear-gradient(180deg, #fff 0%, #fff4f7 100%);
-  box-shadow: 0 16px 36px rgba(176, 77, 110, 0.12);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 236, 190, 0.75), transparent 42%),
+    linear-gradient(180deg, #fff 0%, #fff4f7 100%);
+  box-shadow:
+    0 0 24px rgba(243, 214, 160, 0.45),
+    0 16px 36px rgba(176, 77, 110, 0.12);
 }
 
 .fortune-result h3 {
