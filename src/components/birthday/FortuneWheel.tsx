@@ -1,20 +1,20 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FloralDivider } from "../story/Decorations";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 
 const SEGMENT = 36;
 
 const prizes = [
-  { emoji: "💗", short: "Tâm sự", title: "Tâm sự đặc quyền", detail: "Được ưu tiên tâm sự với hai nhân vật chính." },
-  { emoji: "🍗", short: "Món đầu", title: "Ăn món đầu tiên", detail: "Được quyền chọn món đầu tiên." },
-  { emoji: "🎤", short: "Hát", title: "Bị phạt hát", detail: "Hát một đoạn nhạc bất kỳ tặng chủ tiệc." },
-  { emoji: "💃", short: "Nhảy", title: "Bị phạt nhảy", detail: "Nhảy 10 giây, không được ngại." },
-  { emoji: "🤣", short: "Quê", title: "Kể chuyện quê", detail: "Khai một chuyện quê độ của bản thân." },
-  { emoji: "📸", short: "Ảnh", title: "Chụp ảnh thử thách", detail: "Chụp ảnh tạo dáng bá đạo cùng hai chủ tiệc." },
-  { emoji: "🥤", short: "Rót nước", title: "Phục vụ danh dự", detail: "Rót nước cho người ngồi cạnh." },
-  { emoji: "👑", short: "VIP", title: "Khách VIP", detail: "Được miễn một hình phạt bất kỳ." },
-  { emoji: "💸", short: "Lời chúc", title: "Nộp thuế sinh nhật", detail: "Nói một lời chúc thật có tâm dành cho hai chủ tiệc." },
-  { emoji: "🍀", short: "Thoát", title: "Thoát nạn", detail: "Miễn phạt một lượt, nhân phẩm vô cực!" },
+  { emoji: "💗", short: "Tâm sự", title: "Tâm sự đặc quyền", detail: "Được ưu tiên tâm sự với hai nhân vật chính.", audio: "/audio/wheel-01.mp3", spoken: "Bạn quay trúng Tâm sự đặc quyền. Bạn được ưu tiên tâm sự với hai nhân vật chính." },
+  { emoji: "🍗", short: "Món đầu", title: "Ăn món đầu tiên", detail: "Được quyền chọn món đầu tiên.", audio: "/audio/wheel-02.mp3", spoken: "Bạn quay trúng Ăn món đầu tiên. Bạn được quyền chọn món đầu tiên." },
+  { emoji: "🎤", short: "Hát", title: "Bị phạt hát", detail: "Hát một đoạn nhạc bất kỳ tặng chủ tiệc.", audio: "/audio/wheel-03.mp3", spoken: "Bạn quay trúng Bị phạt hát. Hãy hát một đoạn nhạc bất kỳ tặng chủ tiệc." },
+  { emoji: "💃", short: "Nhảy", title: "Bị phạt nhảy", detail: "Nhảy 10 giây, không được ngại.", audio: "/audio/wheel-04.mp3", spoken: "Bạn quay trúng Bị phạt nhảy. Hãy nhảy mười giây, không được ngại." },
+  { emoji: "🤣", short: "Quê", title: "Kể chuyện quê", detail: "Khai một chuyện quê độ của bản thân.", audio: "/audio/wheel-05.mp3", spoken: "Bạn quay trúng Kể chuyện quê. Hãy khai một chuyện quê độ của bản thân." },
+  { emoji: "📸", short: "Ảnh", title: "Chụp ảnh thử thách", detail: "Chụp ảnh tạo dáng bá đạo cùng hai chủ tiệc.", audio: "/audio/wheel-06.mp3", spoken: "Bạn quay trúng Chụp ảnh thử thách. Hãy chụp ảnh tạo dáng bá đạo cùng hai chủ tiệc." },
+  { emoji: "🥤", short: "Rót nước", title: "Phục vụ danh dự", detail: "Rót nước cho người ngồi cạnh.", audio: "/audio/wheel-07.mp3", spoken: "Bạn quay trúng Phục vụ danh dự. Hãy rót nước cho người ngồi cạnh." },
+  { emoji: "👑", short: "VIP", title: "Khách VIP", detail: "Được miễn một hình phạt bất kỳ.", audio: "/audio/wheel-08.mp3", spoken: "Bạn quay trúng Khách VIP. Bạn được miễn một hình phạt bất kỳ." },
+  { emoji: "💸", short: "Lời chúc", title: "Nộp thuế sinh nhật", detail: "Nói một lời chúc thật có tâm dành cho hai chủ tiệc.", audio: "/audio/wheel-09.mp3", spoken: "Bạn quay trúng Nộp thuế sinh nhật. Hãy nói một lời chúc thật có tâm dành cho hai chủ tiệc." },
+  { emoji: "🍀", short: "Thoát", title: "Thoát nạn", detail: "Miễn phạt một lượt, nhân phẩm vô cực!", audio: "/audio/wheel-10.mp3", spoken: "Bạn quay trúng Thoát nạn. Bạn được miễn phạt một lượt. Nhân phẩm vô cực!" },
 ] as const;
 
 const sliceColors = [
@@ -67,10 +67,7 @@ function playWheelSound(reduced: boolean, durationMs: number) {
   for (let step = 0; step < 10; step += 1) {
     tick(start + step * 0.16, 620 + step * 28, 0.2);
   }
-  const win = start + durationMs / 1000;
-  tick(win, 784, 0.35);
-  tick(win + 0.12, 1046, 0.28);
-  window.setTimeout(() => void context.close(), durationMs + 600);
+  window.setTimeout(() => void context.close(), Math.min(durationMs, 2200));
 }
 
 export function FortuneWheel() {
@@ -82,17 +79,52 @@ export function FortuneWheel() {
   const pending = useRef<number | null>(null);
   const spinButton = useRef<HTMLButtonElement>(null);
   const againButton = useRef<HTMLButtonElement>(null);
+  const voiceRef = useRef<HTMLAudioElement | null>(null);
+
+  function stopVoice() {
+    window.speechSynthesis?.cancel();
+    const audio = voiceRef.current;
+    if (!audio) return;
+    audio.pause();
+    audio.removeAttribute("src");
+    audio.load();
+  }
+
+  function speakPrize(index: number) {
+    stopVoice();
+    const prizeVoice = prizes[index];
+    const audio = new Audio(prizeVoice.audio);
+    voiceRef.current = audio;
+    const fallback = () => {
+      const synth = window.speechSynthesis;
+      if (!synth) return;
+      const utterance = new SpeechSynthesisUtterance(prizeVoice.spoken);
+      utterance.lang = "vi-VN";
+      const voice = synth
+        .getVoices()
+        .find((item) => item.lang.toLowerCase().startsWith("vi"));
+      if (voice) utterance.voice = voice;
+      synth.cancel();
+      synth.speak(utterance);
+    };
+    audio.onerror = fallback;
+    void audio.play().catch(fallback);
+  }
+
+  useEffect(() => stopVoice, []);
 
   function finish(index: number) {
     pending.current = null;
     setSpinning(false);
     setResult(index);
     setShowResult(true);
+    speakPrize(index);
     window.setTimeout(() => againButton.current?.focus(), 0);
   }
 
   function spin() {
     if (spinning) return;
+    stopVoice();
     const index = Math.floor(Math.random() * prizes.length);
     const turns = reduced ? 0 : 6 + Math.floor(Math.random() * 2);
     const current = ((rotation % 360) + 360) % 360;
@@ -207,6 +239,7 @@ export function FortuneWheel() {
               type="button"
               className="text-btn"
               onClick={() => {
+                stopVoice();
                 setShowResult(false);
                 spinButton.current?.focus();
               }}
