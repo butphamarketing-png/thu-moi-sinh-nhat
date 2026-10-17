@@ -1,0 +1,822 @@
+{
+  "voice": "vi-VN-HoaiMyNeural",
+  "segments": [
+    {
+      "id": "memory",
+      "duration": 2.01,
+      "words": [
+        {
+          "text": "Cách",
+          "start": 0.095,
+          "end": 0.244
+        },
+        {
+          "text": "đây",
+          "start": 0.244,
+          "end": 0.529
+        },
+        {
+          "text": "23",
+          "start": 0.529,
+          "end": 1.141
+        },
+        {
+          "text": "năm",
+          "start": 1.141,
+          "end": 1.467
+        },
+        {
+          "text": "về",
+          "start": 1.467,
+          "end": 1.698
+        },
+        {
+          "text": "trước…",
+          "start": 1.698,
+          "end": 2.01
+        }
+      ]
+    },
+    {
+      "id": "angels",
+      "duration": 3.695,
+      "words": [
+        {
+          "text": "Thế",
+          "start": 0.081,
+          "end": 0.217
+        },
+        {
+          "text": "giới",
+          "start": 0.217,
+          "end": 0.516
+        },
+        {
+          "text": "đã",
+          "start": 0.516,
+          "end": 0.692
+        },
+        {
+          "text": "chào",
+          "start": 0.692,
+          "end": 0.937
+        },
+        {
+          "text": "đón",
+          "start": 0.937,
+          "end": 1.154
+        },
+        {
+          "text": "sự",
+          "start": 1.154,
+          "end": 1.413
+        },
+        {
+          "text": "xuất",
+          "start": 1.413,
+          "end": 1.63
+        },
+        {
+          "text": "hiện",
+          "start": 1.63,
+          "end": 1.929
+        },
+        {
+          "text": "của",
+          "start": 1.929,
+          "end": 2.133
+        },
+        {
+          "text": "hai",
+          "start": 2.133,
+          "end": 2.377
+        },
+        {
+          "text": "tiểu",
+          "start": 2.377,
+          "end": 2.622
+        },
+        {
+          "text": "thiên",
+          "start": 2.622,
+          "end": 2.894
+        },
+        {
+          "text": "thần",
+          "start": 2.894,
+          "end": 3.152
+        },
+        {
+          "text": "đáng",
+          "start": 3.152,
+          "end": 3.41
+        },
+        {
+          "text": "yêu.",
+          "start": 3.41,
+          "end": 3.695
+        }
+      ]
+    },
+    {
+      "id": "personalities",
+      "duration": 3.274,
+      "words": [
+        {
+          "text": "Hai",
+          "start": 0.067,
+          "end": 0.285
+        },
+        {
+          "text": "cô",
+          "start": 0.285,
+          "end": 0.516
+        },
+        {
+          "text": "gái,",
+          "start": 0.516,
+          "end": 0.923
+        },
+        {
+          "text": "hai",
+          "start": 1.127,
+          "end": 1.372
+        },
+        {
+          "text": "cá",
+          "start": 1.372,
+          "end": 1.576
+        },
+        {
+          "text": "tính,",
+          "start": 1.576,
+          "end": 1.956
+        },
+        {
+          "text": "hai",
+          "start": 2.16,
+          "end": 2.391
+        },
+        {
+          "text": "câu",
+          "start": 2.391,
+          "end": 2.635
+        },
+        {
+          "text": "chuyện",
+          "start": 2.635,
+          "end": 2.934
+        },
+        {
+          "text": "riêng…",
+          "start": 2.934,
+          "end": 3.274
+        }
+      ]
+    },
+    {
+      "id": "together",
+      "duration": 3.981,
+      "words": [
+        {
+          "text": "Và",
+          "start": 0.095,
+          "end": 0.285
+        },
+        {
+          "text": "hôm",
+          "start": 0.285,
+          "end": 0.489
+        },
+        {
+          "text": "nay,",
+          "start": 0.489,
+          "end": 0.842
+        },
+        {
+          "text": "chúng",
+          "start": 1.073,
+          "end": 1.236
+        },
+        {
+          "text": "mình",
+          "start": 1.236,
+          "end": 1.453
+        },
+        {
+          "text": "muốn",
+          "start": 1.453,
+          "end": 1.698
+        },
+        {
+          "text": "cùng",
+          "start": 1.698,
+          "end": 1.915
+        },
+        {
+          "text": "nhau",
+          "start": 1.915,
+          "end": 2.133
+        },
+        {
+          "text": "tạo",
+          "start": 2.133,
+          "end": 2.432
+        },
+        {
+          "text": "nên",
+          "start": 2.432,
+          "end": 2.649
+        },
+        {
+          "text": "một",
+          "start": 2.649,
+          "end": 2.853
+        },
+        {
+          "text": "kỷ",
+          "start": 2.853,
+          "end": 3.002
+        },
+        {
+          "text": "niệm",
+          "start": 3.002,
+          "end": 3.301
+        },
+        {
+          "text": "thật",
+          "start": 3.301,
+          "end": 3.519
+        },
+        {
+          "text": "đặc",
+          "start": 3.519,
+          "end": 3.709
+        },
+        {
+          "text": "biệt.",
+          "start": 3.709,
+          "end": 3.981
+        }
+      ]
+    },
+    {
+      "id": "joy",
+      "duration": 5.815,
+      "words": [
+        {
+          "text": "Một",
+          "start": 0.081,
+          "end": 0.258
+        },
+        {
+          "text": "ngày",
+          "start": 0.258,
+          "end": 0.489
+        },
+        {
+          "text": "để",
+          "start": 0.489,
+          "end": 0.679
+        },
+        {
+          "text": "cười",
+          "start": 0.679,
+          "end": 0.91
+        },
+        {
+          "text": "thật",
+          "start": 0.91,
+          "end": 1.154
+        },
+        {
+          "text": "nhiều,",
+          "start": 1.154,
+          "end": 1.562
+        },
+        {
+          "text": "lưu",
+          "start": 1.807,
+          "end": 2.01
+        },
+        {
+          "text": "giữ",
+          "start": 2.01,
+          "end": 2.255
+        },
+        {
+          "text": "những",
+          "start": 2.255,
+          "end": 2.486
+        },
+        {
+          "text": "khoảnh",
+          "start": 2.486,
+          "end": 2.69
+        },
+        {
+          "text": "khắc",
+          "start": 2.69,
+          "end": 2.907
+        },
+        {
+          "text": "đáng",
+          "start": 2.907,
+          "end": 3.097
+        },
+        {
+          "text": "nhớ",
+          "start": 3.097,
+          "end": 3.451
+        },
+        {
+          "text": "và",
+          "start": 3.451,
+          "end": 3.695
+        },
+        {
+          "text": "chia",
+          "start": 3.695,
+          "end": 3.872
+        },
+        {
+          "text": "sẻ",
+          "start": 3.872,
+          "end": 4.076
+        },
+        {
+          "text": "niềm",
+          "start": 4.076,
+          "end": 4.334
+        },
+        {
+          "text": "vui",
+          "start": 4.334,
+          "end": 4.578
+        },
+        {
+          "text": "cùng",
+          "start": 4.578,
+          "end": 4.823
+        },
+        {
+          "text": "những",
+          "start": 4.823,
+          "end": 5.027
+        },
+        {
+          "text": "người",
+          "start": 5.027,
+          "end": 5.271
+        },
+        {
+          "text": "thân",
+          "start": 5.271,
+          "end": 5.557
+        },
+        {
+          "text": "yêu.",
+          "start": 5.557,
+          "end": 5.815
+        }
+      ]
+    },
+    {
+      "id": "leads",
+      "duration": 2.649,
+      "words": [
+        {
+          "text": "Và",
+          "start": 0.095,
+          "end": 0.285
+        },
+        {
+          "text": "nhân",
+          "start": 0.285,
+          "end": 0.57
+        },
+        {
+          "text": "vật",
+          "start": 0.57,
+          "end": 0.815
+        },
+        {
+          "text": "chính",
+          "start": 0.815,
+          "end": 1.073
+        },
+        {
+          "text": "của",
+          "start": 1.073,
+          "end": 1.25
+        },
+        {
+          "text": "ngày",
+          "start": 1.25,
+          "end": 1.535
+        },
+        {
+          "text": "hôm",
+          "start": 1.535,
+          "end": 1.766
+        },
+        {
+          "text": "nay",
+          "start": 1.766,
+          "end": 2.024
+        },
+        {
+          "text": "chính",
+          "start": 2.024,
+          "end": 2.269
+        },
+        {
+          "text": "là…",
+          "start": 2.269,
+          "end": 2.649
+        }
+      ]
+    },
+    {
+      "id": "name-tien",
+      "duration": 1.277,
+      "words": [
+        {
+          "text": "Lê",
+          "start": 0.081,
+          "end": 0.312
+        },
+        {
+          "text": "Thị",
+          "start": 0.312,
+          "end": 0.597
+        },
+        {
+          "text": "Kim",
+          "start": 0.597,
+          "end": 0.896
+        },
+        {
+          "text": "Tiền…",
+          "start": 0.896,
+          "end": 1.277
+        }
+      ]
+    },
+    {
+      "id": "name-uyen",
+      "duration": 1.046,
+      "words": [
+        {
+          "text": "Và",
+          "start": 0.095,
+          "end": 0.326
+        },
+        {
+          "text": "Phương",
+          "start": 0.326,
+          "end": 0.692
+        },
+        {
+          "text": "Uyên!",
+          "start": 0.692,
+          "end": 1.046
+        }
+      ]
+    },
+    {
+      "id": "invite",
+      "duration": 3.75,
+      "words": [
+        {
+          "text": "Chúng",
+          "start": 0.095,
+          "end": 0.244
+        },
+        {
+          "text": "mình",
+          "start": 0.244,
+          "end": 0.502
+        },
+        {
+          "text": "trân",
+          "start": 0.502,
+          "end": 0.706
+        },
+        {
+          "text": "trọng",
+          "start": 0.706,
+          "end": 0.964
+        },
+        {
+          "text": "mời",
+          "start": 0.964,
+          "end": 1.141
+        },
+        {
+          "text": "bạn",
+          "start": 1.141,
+          "end": 1.413
+        },
+        {
+          "text": "đến",
+          "start": 1.413,
+          "end": 1.657
+        },
+        {
+          "text": "tham",
+          "start": 1.657,
+          "end": 1.902
+        },
+        {
+          "text": "dự",
+          "start": 1.902,
+          "end": 2.133
+        },
+        {
+          "text": "bữa",
+          "start": 2.133,
+          "end": 2.35
+        },
+        {
+          "text": "tiệc",
+          "start": 2.35,
+          "end": 2.554
+        },
+        {
+          "text": "sinh",
+          "start": 2.554,
+          "end": 2.785
+        },
+        {
+          "text": "nhật",
+          "start": 2.785,
+          "end": 3.002
+        },
+        {
+          "text": "đặc",
+          "start": 3.002,
+          "end": 3.206
+        },
+        {
+          "text": "biệt",
+          "start": 3.206,
+          "end": 3.437
+        },
+        {
+          "text": "này.",
+          "start": 3.437,
+          "end": 3.75
+        }
+      ]
+    },
+    {
+      "id": "dress",
+      "duration": 6.127,
+      "words": [
+        {
+          "text": "Hãy",
+          "start": 0.081,
+          "end": 0.258
+        },
+        {
+          "text": "cùng",
+          "start": 0.258,
+          "end": 0.489
+        },
+        {
+          "text": "diện",
+          "start": 0.489,
+          "end": 0.733
+        },
+        {
+          "text": "dress",
+          "start": 0.733,
+          "end": 1.019
+        },
+        {
+          "text": "code",
+          "start": 1.019,
+          "end": 1.222
+        },
+        {
+          "text": "trắng",
+          "start": 1.222,
+          "end": 1.467
+        },
+        {
+          "text": "và",
+          "start": 1.467,
+          "end": 1.671
+        },
+        {
+          "text": "đen,",
+          "start": 1.671,
+          "end": 2.051
+        },
+        {
+          "text": "chuẩn",
+          "start": 2.309,
+          "end": 2.513
+        },
+        {
+          "text": "bị",
+          "start": 2.513,
+          "end": 2.744
+        },
+        {
+          "text": "cho",
+          "start": 2.744,
+          "end": 2.907
+        },
+        {
+          "text": "một",
+          "start": 2.907,
+          "end": 3.111
+        },
+        {
+          "text": "buổi",
+          "start": 3.111,
+          "end": 3.288
+        },
+        {
+          "text": "tối",
+          "start": 3.288,
+          "end": 3.559
+        },
+        {
+          "text": "thật",
+          "start": 3.559,
+          "end": 3.763
+        },
+        {
+          "text": "xinh",
+          "start": 3.763,
+          "end": 3.994
+        },
+        {
+          "text": "đẹp,",
+          "start": 3.994,
+          "end": 4.252
+        },
+        {
+          "text": "thật",
+          "start": 4.483,
+          "end": 4.673
+        },
+        {
+          "text": "vui",
+          "start": 4.673,
+          "end": 4.972
+        },
+        {
+          "text": "và",
+          "start": 4.972,
+          "end": 5.244
+        },
+        {
+          "text": "thật",
+          "start": 5.244,
+          "end": 5.502
+        },
+        {
+          "text": "đáng",
+          "start": 5.502,
+          "end": 5.72
+        },
+        {
+          "text": "nhớ.",
+          "start": 5.72,
+          "end": 6.127
+        }
+      ]
+    },
+    {
+      "id": "gift",
+      "duration": 3.953,
+      "words": [
+        {
+          "text": "Sự",
+          "start": 0.081,
+          "end": 0.366
+        },
+        {
+          "text": "hiện",
+          "start": 0.366,
+          "end": 0.57
+        },
+        {
+          "text": "diện",
+          "start": 0.57,
+          "end": 0.855
+        },
+        {
+          "text": "của",
+          "start": 0.855,
+          "end": 0.991
+        },
+        {
+          "text": "bạn",
+          "start": 0.991,
+          "end": 1.277
+        },
+        {
+          "text": "chính",
+          "start": 1.277,
+          "end": 1.521
+        },
+        {
+          "text": "là",
+          "start": 1.521,
+          "end": 1.711
+        },
+        {
+          "text": "món",
+          "start": 1.711,
+          "end": 1.997
+        },
+        {
+          "text": "quà",
+          "start": 1.997,
+          "end": 2.201
+        },
+        {
+          "text": "tuyệt",
+          "start": 2.201,
+          "end": 2.472
+        },
+        {
+          "text": "vời",
+          "start": 2.472,
+          "end": 2.69
+        },
+        {
+          "text": "nhất",
+          "start": 2.69,
+          "end": 2.934
+        },
+        {
+          "text": "dành",
+          "start": 2.934,
+          "end": 3.206
+        },
+        {
+          "text": "cho",
+          "start": 3.206,
+          "end": 3.396
+        },
+        {
+          "text": "chúng",
+          "start": 3.396,
+          "end": 3.614
+        },
+        {
+          "text": "mình.",
+          "start": 3.614,
+          "end": 3.953
+        }
+      ]
+    },
+    {
+      "id": "farewell",
+      "duration": 1.929,
+      "words": [
+        {
+          "text": "Hẹn",
+          "start": 0.067,
+          "end": 0.339
+        },
+        {
+          "text": "gặp",
+          "start": 0.339,
+          "end": 0.529
+        },
+        {
+          "text": "bạn",
+          "start": 0.529,
+          "end": 0.855
+        },
+        {
+          "text": "tại",
+          "start": 0.855,
+          "end": 1.114
+        },
+        {
+          "text": "bữa",
+          "start": 1.114,
+          "end": 1.358
+        },
+        {
+          "text": "tiệc",
+          "start": 1.358,
+          "end": 1.671
+        },
+        {
+          "text": "nhé!",
+          "start": 1.671,
+          "end": 1.929
+        }
+      ]
+    }
+  ]
+}
