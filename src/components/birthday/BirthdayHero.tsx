@@ -8,6 +8,14 @@ export function BirthdayHero({ stage }: { stage: PortraitStage }) {
 
   return (
     <header className="hero reveal" id="hero">
+      <div className="hero-lights" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+        <i />
+        <i />
+        <i />
+      </div>
       <p className="eyebrow">Thư mời</p>
       <FloralDivider />
       <h1 className="script-title">Sinh Nhật</h1>
