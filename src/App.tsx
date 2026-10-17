@@ -6,7 +6,7 @@ import { BirthdayHero } from "./components/birthday/BirthdayHero";
 import { DressCode } from "./components/birthday/DressCode";
 import { EventDetails } from "./components/birthday/EventDetails";
 import { EventTimeline } from "./components/birthday/EventTimeline";
-import { RSVPSection } from "./components/birthday/RSVPSection";
+import { FortuneWheel } from "./components/birthday/FortuneWheel";
 import { IntroScreen } from "./components/intro/IntroScreen";
 import { SparkleField } from "./components/intro/SparkleField";
 import { Atmosphere } from "./components/story/Atmosphere";
@@ -143,7 +143,7 @@ export function App() {
           <EventTimeline visibleCount={programCount} />
           {story.isRevealed("finale") && (
             <>
-              <RSVPSection />
+              <FortuneWheel />
               <BirthdayFooter />
             </>
           )}
