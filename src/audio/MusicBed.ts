@@ -17,7 +17,7 @@ export class MusicBed {
   private step = 0;
   private started = false;
   private suspended = false;
-  private readonly volume = 0.075;
+  private readonly volume = 0.14;
   private readonly beat = 60 / 78;
 
   start() {
