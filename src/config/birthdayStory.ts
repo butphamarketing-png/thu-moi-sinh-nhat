@@ -9,7 +9,7 @@ import type { StoryAction, StorySegment } from "../types/story";
 export const storySegments: StorySegment[] = [
   {
     id: "once",
-    text: "Ngày xửa ngày xưa… à không, chính xác là 23 năm về trước…",
+    text: "Cách đây 23 năm về trước…",
     audioSrc: "/audio/01-once.mp3",
     enabled: true,
     skippable: true,
@@ -18,7 +18,7 @@ export const storySegments: StorySegment[] = [
   },
   {
     id: "angels",
-    text: "Vào một ngày thật đẹp, vũ trụ đã gửi đến thế gian hai tiểu thiên thần đáng yêu…",
+    text: "Vũ trụ đã gửi đến thế gian hai tiểu thiên thần đáng yêu…",
     audioSrc: "/audio/02-angels.mp3",
     enabled: true,
     skippable: true,

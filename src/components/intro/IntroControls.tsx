@@ -24,7 +24,7 @@ export function IntroControls({ locked, error, onStart, onSkip, onRetry }: Intro
         disabled={locked || pressed}
       >
         <HeartIcon />
-        <span>{locked ? "Đang mở câu chuyện…" : "Mở thiệp"}</span>
+        <span>{locked ? "Đang mở thư…" : "Mở thư"}</span>
       </button>
       {error && (
         <button type="button" className="text-btn" onClick={onRetry}>

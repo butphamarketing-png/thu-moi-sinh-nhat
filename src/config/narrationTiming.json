@@ -3,168 +3,108 @@
   "segments": [
     {
       "id": "once",
-      "duration": 4.021,
+      "duration": 2.01,
       "words": [
         {
-          "text": "Ngày",
-          "start": 0.081,
-          "end": 0.285
+          "text": "Cách",
+          "start": 0.095,
+          "end": 0.244
         },
         {
-          "text": "xửa",
-          "start": 0.285,
-          "end": 0.543
-        },
-        {
-          "text": "ngày",
-          "start": 0.543,
-          "end": 0.774
-        },
-        {
-          "text": "xưa…",
-          "start": 0.774,
-          "end": 1.182
-        },
-        {
-          "text": "à",
-          "start": 1.182,
-          "end": 1.372
-        },
-        {
-          "text": "không,",
-          "start": 1.372,
-          "end": 1.752
-        },
-        {
-          "text": "chính",
-          "start": 1.997,
-          "end": 2.173
-        },
-        {
-          "text": "xác",
-          "start": 2.173,
-          "end": 2.418
-        },
-        {
-          "text": "là",
-          "start": 2.418,
-          "end": 2.663
+          "text": "đây",
+          "start": 0.244,
+          "end": 0.529
         },
         {
           "text": "23",
-          "start": 2.663,
-          "end": 3.206
+          "start": 0.529,
+          "end": 1.141
         },
         {
           "text": "năm",
-          "start": 3.206,
-          "end": 3.478
+          "start": 1.141,
+          "end": 1.467
         },
         {
           "text": "về",
-          "start": 3.478,
-          "end": 3.709
+          "start": 1.467,
+          "end": 1.698
         },
         {
           "text": "trước…",
-          "start": 3.709,
-          "end": 4.021
+          "start": 1.698,
+          "end": 2.01
         }
       ]
     },
     {
       "id": "angels",
-      "duration": 4.619,
+      "duration": 3.342,
       "words": [
         {
-          "text": "Vào",
-          "start": 0.095,
-          "end": 0.244
-        },
-        {
-          "text": "một",
-          "start": 0.244,
-          "end": 0.475
-        },
-        {
-          "text": "ngày",
-          "start": 0.475,
-          "end": 0.706
-        },
-        {
-          "text": "thật",
-          "start": 0.706,
-          "end": 0.923
-        },
-        {
-          "text": "đẹp,",
-          "start": 0.923,
-          "end": 1.209
-        },
-        {
-          "text": "vũ",
-          "start": 1.48,
-          "end": 1.657
+          "text": "Vũ",
+          "start": 0.081,
+          "end": 0.285
         },
         {
           "text": "trụ",
-          "start": 1.657,
-          "end": 1.888
+          "start": 0.285,
+          "end": 0.557
         },
         {
           "text": "đã",
-          "start": 1.888,
-          "end": 2.078
+          "start": 0.557,
+          "end": 0.747
         },
         {
           "text": "gửi",
-          "start": 2.078,
-          "end": 2.35
+          "start": 0.747,
+          "end": 1.019
         },
         {
           "text": "đến",
-          "start": 2.35,
-          "end": 2.581
+          "start": 1.019,
+          "end": 1.277
         },
         {
           "text": "thế",
-          "start": 2.581,
-          "end": 2.812
+          "start": 1.277,
+          "end": 1.48
         },
         {
           "text": "gian",
-          "start": 2.812,
-          "end": 3.084
+          "start": 1.48,
+          "end": 1.793
         },
         {
           "text": "hai",
-          "start": 3.084,
-          "end": 3.301
+          "start": 1.793,
+          "end": 2.01
         },
         {
           "text": "tiểu",
-          "start": 3.301,
-          "end": 3.532
+          "start": 2.01,
+          "end": 2.241
         },
         {
           "text": "thiên",
-          "start": 3.532,
-          "end": 3.804
+          "start": 2.241,
+          "end": 2.527
         },
         {
           "text": "thần",
-          "start": 3.804,
-          "end": 4.062
+          "start": 2.527,
+          "end": 2.785
         },
         {
           "text": "đáng",
-          "start": 4.062,
-          "end": 4.334
+          "start": 2.785,
+          "end": 3.057
         },
         {
           "text": "yêu…",
-          "start": 4.334,
-          "end": 4.619
+          "start": 3.057,
+          "end": 3.342
         }
       ]
     },
