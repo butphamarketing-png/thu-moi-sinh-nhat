@@ -29,7 +29,7 @@ export const birthdayContent = {
       born: "26.10",
       image: "/images/kim-tien.jpg",
       alt: "Ảnh chân dung Kim Tiền",
-      objectPosition: "34% 28%",
+      objectPosition: "center 30%",
     },
     {
       id: "phuong-uyen",
