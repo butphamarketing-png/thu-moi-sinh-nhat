@@ -48,6 +48,8 @@ export function Atmosphere({ reduced, finale }: { reduced: boolean; finale: bool
           <span key={index} className={`spark spark-${kind} spark-${index}`} />
         ))}
       {!reduced && blossoms.map((index) => <Blossom key={index} index={index} />)}
+      {!reduced &&
+        [0, 1, 2].map((index) => <span key={index} className={`meteor meteor-${index}`} />)}
       {finale && !reduced && (
         <div className="confetti">
           {Array.from({ length: 12 }, (_, index) => (
