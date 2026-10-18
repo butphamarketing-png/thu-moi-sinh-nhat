@@ -17,8 +17,9 @@ export class MusicBed {
   private step = 0;
   private started = false;
   private suspended = false;
-  private readonly volume = 0.14;
-  private readonly beat = 60 / 78;
+  private volume = 0.14;
+  private beat = 60 / 78;
+  private lively = false;
 
   start() {
     if (this.started) {
@@ -66,6 +67,18 @@ export class MusicBed {
     this.suspended = false;
     void this.ctx.resume();
     this.nextTime = Math.max(this.nextTime, this.ctx.currentTime + 0.05);
+  }
+
+  celebrate() {
+    if (this.lively) return;
+    this.lively = true;
+    this.beat = 60 / 108;
+    this.volume = 0.18;
+    if (!this.ctx || !this.master || this.suspended) return;
+    const now = this.ctx.currentTime;
+    this.master.gain.cancelScheduledValues(now);
+    this.master.gain.setValueAtTime(Math.max(this.master.gain.value, 0.0001), now);
+    this.master.gain.exponentialRampToValueAtTime(this.volume, now + 0.45);
   }
 
   setMuted(muted: boolean) {

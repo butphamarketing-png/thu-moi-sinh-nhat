@@ -48,6 +48,7 @@ export function App() {
   const showEvent =
     story.isRevealed("dress-label") || story.isRevealed("event-time") || story.isRevealed("event-place");
   const programCount = programActions.filter((action) => story.isRevealed(action)).length;
+  const wheelOn = story.isRevealed("finale");
   const controlsOn = story.phase === "playing" || story.phase === "paused" || story.phase === "completed" || story.phase === "skipped";
   const voiceNote = spokenModeLabel(story.audioMode, story.vietnameseVoice);
 
@@ -57,7 +58,8 @@ export function App() {
     bed.setMuted(!musicOn);
     if (story.phase === "paused") bed.pause();
     else if (story.phase === "playing" || story.phase === "completed" || story.phase === "skipped") bed.resume();
-  }, [musicOn, story.phase]);
+    if (wheelOn) bed.celebrate();
+  }, [musicOn, story.phase, wheelOn]);
 
   useEffect(() => () => musicRef.current?.dispose(), []);
 
@@ -173,7 +175,7 @@ export function App() {
             </section>
           )}
           <EventTimeline visibleCount={programCount} />
-          {story.isRevealed("finale") && (
+          {wheelOn && (
             <>
               <FortuneWheel />
               <BirthdayFooter />

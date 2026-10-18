@@ -7,9 +7,9 @@ import { SpokenLine } from "./SpokenLine";
 const kickers: Partial<Record<SceneId, string>> = {
   angels: "Hai tiểu thiên thần",
   frames: "Hai cô gái, hai cá tính",
-  together: "Một kỷ niệm thật đặc biệt",
-  joy: "Cùng nhau lưu giữ niềm vui",
-  focus: "Nhân vật chính của hôm nay",
+  together: "Một chương thật đặc biệt",
+  joy: "Tiếng cười và lời chúc",
+  focus: "Những vị khách đặc biệt",
   names: "Chính là",
 };
 
