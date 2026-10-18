@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { IntroControls } from "./IntroControls";
-import { HeartIcon } from "../icons";
 
 type IntroScreenProps = {
   leaving: boolean;
@@ -35,11 +34,17 @@ export function IntroScreen({
         if (event.animationName === "intro-leave") onLeft();
       }}
     >
+      <div className="intro-mist" aria-hidden="true" />
+      <div className="intro-motes" aria-hidden="true">
+        <i /><i /><i /><i /><i /><i /><i /><i />
+      </div>
+      <div className="intro-bloom" aria-hidden="true" />
+      <div className="tale-doors" aria-hidden="true">
+        <span />
+        <span />
+      </div>
       <div className="intro-core">
-        <div className="intro-heart" aria-hidden="true">
-          <HeartIcon />
-        </div>
-        <p id="intro-title">Một câu chuyện đặc biệt sắp bắt đầu…</p>
+        <h1 id="intro-title" className="once-line">Once upon a birthday…</h1>
         {error && (
           <p className="intro-error" role="alert">
             {error}
