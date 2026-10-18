@@ -768,6 +768,261 @@
       ]
     },
     {
+      "id": "remember",
+      "duration": 3.505,
+      "words": [
+        {
+          "text": "Vậy",
+          "start": 0.095,
+          "end": 0.366
+        },
+        {
+          "text": "thì",
+          "start": 0.366,
+          "end": 0.597
+        },
+        {
+          "text": "hãy",
+          "start": 0.597,
+          "end": 0.815
+        },
+        {
+          "text": "cùng",
+          "start": 0.815,
+          "end": 1.1
+        },
+        {
+          "text": "ghi",
+          "start": 1.1,
+          "end": 1.277
+        },
+        {
+          "text": "nhớ",
+          "start": 1.277,
+          "end": 1.589
+        },
+        {
+          "text": "cuộc",
+          "start": 1.589,
+          "end": 1.793
+        },
+        {
+          "text": "hẹn",
+          "start": 1.793,
+          "end": 2.065
+        },
+        {
+          "text": "đặc",
+          "start": 2.065,
+          "end": 2.241
+        },
+        {
+          "text": "biệt",
+          "start": 2.241,
+          "end": 2.486
+        },
+        {
+          "text": "của",
+          "start": 2.486,
+          "end": 2.69
+        },
+        {
+          "text": "chúng",
+          "start": 2.69,
+          "end": 2.934
+        },
+        {
+          "text": "ta",
+          "start": 2.934,
+          "end": 3.22
+        },
+        {
+          "text": "nhé!",
+          "start": 3.22,
+          "end": 3.505
+        }
+      ]
+    },
+    {
+      "id": "clock",
+      "duration": 5.692,
+      "words": [
+        {
+          "text": "Thời",
+          "start": 0.081,
+          "end": 0.271
+        },
+        {
+          "text": "gian:",
+          "start": 0.271,
+          "end": 0.692
+        },
+        {
+          "text": "19 giờ 30 phút,",
+          "start": 0.923,
+          "end": 2.296
+        },
+        {
+          "text": "ngày 22 tháng 10 năm 2026.",
+          "start": 2.54,
+          "end": 5.692
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "duration": 2.472,
+      "words": [
+        {
+          "text": "Địa",
+          "start": 0.081,
+          "end": 0.326
+        },
+        {
+          "text": "điểm:",
+          "start": 0.326,
+          "end": 0.76
+        },
+        {
+          "text": "Gigamall,",
+          "start": 0.964,
+          "end": 1.847
+        },
+        {
+          "text": "Thủ",
+          "start": 2.038,
+          "end": 2.241
+        },
+        {
+          "text": "Đức.",
+          "start": 2.241,
+          "end": 2.472
+        }
+      ]
+    },
+    {
+      "id": "dress-code",
+      "duration": 1.535,
+      "words": [
+        {
+          "text": "Dress",
+          "start": 0.095,
+          "end": 0.394
+        },
+        {
+          "text": "code:",
+          "start": 0.394,
+          "end": 0.679
+        },
+        {
+          "text": "trắng",
+          "start": 0.91,
+          "end": 1.168
+        },
+        {
+          "text": "đen.",
+          "start": 1.168,
+          "end": 1.535
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "duration": 4.673,
+      "words": [
+        {
+          "text": "Đừng",
+          "start": 0.081,
+          "end": 0.312
+        },
+        {
+          "text": "đến",
+          "start": 0.312,
+          "end": 0.543
+        },
+        {
+          "text": "quá",
+          "start": 0.543,
+          "end": 0.76
+        },
+        {
+          "text": "muộn",
+          "start": 0.76,
+          "end": 1.046
+        },
+        {
+          "text": "nhé,",
+          "start": 1.046,
+          "end": 1.372
+        },
+        {
+          "text": "bởi",
+          "start": 1.603,
+          "end": 1.793
+        },
+        {
+          "text": "những",
+          "start": 1.793,
+          "end": 2.038
+        },
+        {
+          "text": "khoảnh",
+          "start": 2.038,
+          "end": 2.255
+        },
+        {
+          "text": "khắc",
+          "start": 2.255,
+          "end": 2.445
+        },
+        {
+          "text": "tuyệt",
+          "start": 2.445,
+          "end": 2.69
+        },
+        {
+          "text": "vời",
+          "start": 2.69,
+          "end": 2.893
+        },
+        {
+          "text": "nhất",
+          "start": 2.894,
+          "end": 3.124
+        },
+        {
+          "text": "sẽ",
+          "start": 3.125,
+          "end": 3.355
+        },
+        {
+          "text": "chẳng",
+          "start": 3.355,
+          "end": 3.614
+        },
+        {
+          "text": "chờ",
+          "start": 3.614,
+          "end": 3.858
+        },
+        {
+          "text": "đợi",
+          "start": 3.858,
+          "end": 4.157
+        },
+        {
+          "text": "ai",
+          "start": 4.157,
+          "end": 4.361
+        },
+        {
+          "text": "đâu!",
+          "start": 4.361,
+          "end": 4.673
+        }
+      ]
+    },
+    {
       "id": "dress",
       "duration": 4.578,
       "words": [
