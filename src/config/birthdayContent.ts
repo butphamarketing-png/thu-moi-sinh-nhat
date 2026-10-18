@@ -37,7 +37,7 @@ export const birthdayContent = {
       born: "29.10",
       image: "/images/phuong-uyen.jpg",
       alt: "Ảnh chân dung Phương Uyên",
-      objectPosition: "center 22%",
+      objectPosition: "center 18%",
     },
   ] satisfies Celebrant[],
   invitation:
